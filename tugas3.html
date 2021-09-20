@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Aritmatika</title>
+    <style>
+        body{
+            background-image: url(gg.jpg);
+            
+        }
+        fieldset{
+            width: 250px;
+            border-color: #CD6301;
+            box-shadow: 4px 4px 4px #CD6301;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 style="color: #CD6301; font-family: 'Courier New', Courier, monospace;">Hai <b id="nama"> </b>, Selamat datang di blog saya  </h1>
+    <form name="form">
+    <table border="0" align="center" width="1000px" style="margin-right: 150px; margin-top: 30px;">
+        <tr>
+            <td height="100px" style="padding-top: 20px; padding-left: 150px; padding-right: 150px;">
+                <fieldset  ><legend><h1>Program Aritmatika</h1></legend>
+                <table border="0" align="center" width="600px" >
+                <tr>
+            <td width="200px" height="20px" ><h2 style="margin-left: 15px;">Bilangan 1</h2></td>
+            <td><input type="number" name="bil1" style="margin-left: 50px;  border-radius: 50%; width: 150px; height: 50px; padding-left: 25px; background-color: #EFA765; cursor: pointer;"></td></tr>
+            <tr>
+                <td width="200px " ><h2  style="margin-left: 15px;">Bilangan 2</h2></td>
+                <td><input type="number" name="bil2" style="margin-left: 50px; border-radius: 50%; width: 150px; height: 50px;padding-left: 25px; background-color: #EFA765; cursor: pointer;"></td></tr>
+                <tr>
+                    <td ><h2  style="margin-left: 15px;">Hasil</h2></td>
+                    <td><input type="number" name="hasil" value="" style="margin-left: 50px; border-radius: 50%; width: 150px; height: 50px;padding-left: 25px; background-color: #EFA765; cursor: pointer;"></td>
+                </tr>
+                 
+        </table>
+    </fieldset><br>
+    <table border="0" width="700px" align="center" height="150px">
+        <tr>
+            
+            <td height="50px" align="center">
+                <input type="button" style="border-radius: 50%; width: 60px; height: 60px; margin-right: 50px; background-color: #CD6301;cursor: pointer;" onclick="tambah()" value="+">
+                <input type="button" style="border-radius: 50%; width:  60px; height:  60px; margin-right: 50px; background-color: #CD6301;cursor: pointer;" onclick="kurang()" value="-">
+                <input type="button" style="border-radius: 50%; width:  60px; height:  60px; margin-right: 50px; background-color: #CD6301;cursor: pointer;" onclick="kali()" value="*">
+                <input type="button" style="border-radius: 50%; width: 60px; height:  60px; margin-right: 50px; background-color: #CD6301;cursor: pointer;" onclick="bagi()" value="/">
+                <input type="reset" style="border-radius: 50%; width:  60px; height:  60px; margin-right: 50px; background-color: #CD6301;cursor: pointer;" onclick="clear()" value="CLEAR">
+            </td>
+        </tr></table>
+    </td>
+    </tr>
+       
+    </table></form>
+    <script>
+        let pengguna = window.prompt("Hai,Siapa nama Anda?")
+       document.getElementById('nama').innerHTML=pengguna;
+        function cek(){
+   if (form.bil1.value == "" || form.bil2.value == "") {
+    alert("Angka Belum Dimasukkan");
+    exit
+   }
+  }
+        function tambah(){
+            cek();
+            let a = parseInt(form.bil1.value);
+            let b = parseInt(form.bil2.value);
+            let c = a+b
+            alert (a+" + " +b+" = "+c)
+            form.hasil.value = c;
+        }
+        function kurang(){
+            cek();
+            let a = parseInt(form.bil1.value);
+            let b = parseInt(form.bil2.value);
+            let c = a-b
+            alert (a+" - " +b+" = "+c)
+            form.hasil.value = c;
+        }
+        function kali(){
+            cek();
+            let a = parseInt(form.bil1.value);
+            let b = parseInt(form.bil2.value);
+            let c = a*b
+            alert (a+" * " +b+" = "+c)
+            form.hasil.value = c;
+        }
+        function bagi(){
+            cek();
+            let a = parseInt(form.bil1.value);
+            let b = parseInt(form.bil2.value);
+            let c = a/b
+            alert (a+" / " +b+" = "+c)
+            form.hasil.value = c;
+        }
+    </script>
+
+</body>
+</html>
